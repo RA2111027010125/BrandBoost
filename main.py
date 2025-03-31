@@ -127,7 +127,7 @@ if st.button("✨ Generate Post & Image"):
         generated_image = generate_image(post)
 
     if generated_image:
-        st.image(generated_image, caption="Generated Image for Your Post", use_container_width=True)
+        st.image(generated_image, caption="Generated Image for Your Post", width=700)
     else:
         st.error("Failed to generate an image. Please try again.")
 

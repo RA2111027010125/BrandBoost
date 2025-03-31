@@ -13,10 +13,19 @@ def get_length_str(length):
         return "11 to 15 lines"
 
 
-def generate_post(length, language, tag):
-    prompt = get_prompt(length, language, tag)
-    response = llm.invoke(prompt)
-    return response.content
+def generate_post(length, language, tag, description=""):
+    """
+    Generate a LinkedIn post based on the given length, language, topic, and optional description.
+    """
+    base_prompt = f"Write a {length.lower()} LinkedIn post in {language} about {tag}."
+
+    if description:
+        base_prompt += f" Focus on: {description}"  # Incorporate description for personalization.
+
+    # Call the LLM to generate the post
+    response = llm.invoke(base_prompt)
+
+    return response.content  # Ensure correct response handling
 
 
 def get_prompt(length, language, tag):
@@ -31,7 +40,6 @@ def get_prompt(length, language, tag):
     If Language is Hinglish then it means it is a mix of Hindi and English. 
     The script for the generated post should always be English.
     '''
-    # prompt = prompt.format(post_topic=tag, post_length=length_str, post_language=language)
 
     examples = few_shot.get_filtered_posts(length, language, tag)
 
@@ -40,13 +48,13 @@ def get_prompt(length, language, tag):
 
     for i, post in enumerate(examples):
         post_text = post['text']
-        prompt += f'\n\n Example {i+1}: \n\n {post_text}'
+        prompt += f'\n\n Example {i + 1}: \n\n {post_text}'
 
-        if i == 1: # Use max two samples
+        if i == 1:  # Use max two samples
             break
 
     return prompt
 
 
 if __name__ == "__main__":
-    print(generate_post("Medium", "English", "Mental Health"))
+    print(generate_post("Medium", "English", "Mental Health", "How to manage stress effectively"))

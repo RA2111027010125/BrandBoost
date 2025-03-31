@@ -3,7 +3,7 @@ import json
 
 
 class FewShotPosts:
-    def __init__(self, file_path="C:\LinkedIn\data\processed_posts.json"):
+    def __init__(self, file_path="data/processed_posts.json"):
         self.df = None
         self.unique_tags = None
         self.load_posts(file_path)

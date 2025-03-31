@@ -8,3 +8,4 @@ python-dotenv==1.0.1
 stability-sdk
 pillow~=10.4.0
 dotenv~=0.9.9
+streamlit==latest

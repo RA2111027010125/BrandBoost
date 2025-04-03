@@ -6,7 +6,7 @@ import io
 from PIL import Image
 
 # Stability AI API key
-STABILITY_API_KEY = "sk-kIPETilq2piuydomUkS7lphv6rMa2K6K7NvaJ7QMxMvCtmjW"
+STABILITY_API_KEY = "sk-IjlPe4B1es6UlEsfFZdAA3crqFnhBDIhmIhxwjdlzh1EnG25"
 
 # Initialize Stable Diffusion client
 stable_client = stable_diffusion.StabilityInference(

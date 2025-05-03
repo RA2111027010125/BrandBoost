@@ -14,7 +14,7 @@ from few_shot import FewShotPosts
 from post_generator import generate_post
 from post_analyzer import analyze_post
 from compare import compare_posts
-from radar_chart import create_comparison_line_chart
+from line_chart import create_comparison_line_chart
 from stability_sdk import client as stable_diffusion
 
 # -------------------- Stability AI API Key --------------------

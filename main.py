@@ -152,7 +152,7 @@ if nav_option == "Generate Post":
                     st.session_state.generated_image = None
 
         if st.session_state.generated_image:
-            st.image(st.session_state.generated_image, caption="Generated Image for Your Post", use_container_width=True)
+            st.image(st.session_state.generated_image, caption="Generated Image for Your Post")
         elif st.session_state.generated_image is None:
             st.error("Failed to generate an image. Please try again.")
 

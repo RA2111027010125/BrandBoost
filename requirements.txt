@@ -5,8 +5,8 @@ langchain-community==0.2.12
 langchain_groq==0.1.9
 pandas==2.0.2
 python-dotenv==1.0.1
-stability-sdk
-pillow~=10.4.0
-dotenv~=0.9.9
+plotly==5.21.0
+stability-sdk==0.11.1
+Pillow==10.4.0
 matplotlib==3.8.4
 seaborn==0.13.2

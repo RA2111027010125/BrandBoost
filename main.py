@@ -19,7 +19,7 @@ from stability_sdk import client as stable_diffusion
 
 # -------------------- Stability AI API Key --------------------
 # Stability AI API key (nivetha acc key)
-STABILITY_API_KEY = "sk-pdzAfTpJIelm8JQPtlKzvhCiRIcltdV790q6rzIWY6Ki151S"
+STABILITY_API_KEY = "sk-ptEnqYxWlTxazcVNrZAwDpq5kLcw2ELfeXIjRAbml1uygY1K"
 
 # Initialize Stable Diffusion client
 stable_client = stable_diffusion.StabilityInference(
